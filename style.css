@@ -14,6 +14,7 @@ body {
 
 #page-head {
     margin-top: 1vw;
+    margin-bottom: 3vh;
     
     user-select: none;
     -moz-user-select: none;
@@ -93,6 +94,8 @@ body {
     width: 1em;
     height: 1em;
     display: inline-block;
+
+    margin-left: calc(9pt + 0.025em - 0.5em);
 
     transition: background 400ms ease;
 }
