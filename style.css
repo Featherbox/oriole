@@ -2,37 +2,110 @@
 
 body {
     text-align: center;
+    font-family: "Cutive Mono";
+    font-size: 9pt;
 
     margin: 0;
 }
 
-#page-head .title {
-    font-family: "Cutive Mono";
-    padding: 2vw;
-    padding-bottom: 1vw;
-    width: 30vw;
-    margin-left: 33vw;
-    margin-right: 33vw;
-    text-align: center;
-    text-transform: uppercase;
-    border-bottom: 1px solid black;
-}
-
-#page-head .menu {
-    margin-top: 0.6vw;
-}
-
-#page-head .menu span {
-    margin: 0.15vw;
-
-    background: #000;
-    color: #fff;
-    padding: 2vw;
-    padding-top: 0.3vw;
-    padding-bottom: 0.3vw;
+::selection, ::-moz-selection {
+    background: #fb06;
 }
 
 #page-head {
-    margin-bottom: 3vw;
+    margin-top: 1vw;
+    
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
+#page-head .title {
+    border-bottom: 1px solid #000;
+    display: inline-block;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#page-head .title::after {
+    content: ".";
+    font-weight: bold;
+    color: #fb0;
+    font-size: 17pt;
+}
+
+.page {
+    position: relative;
+}
+
+.page .title {
+    display: inline-block;
+
+    position: absolute;
+    left: 1em;
+    top: 0.05em;
+    
+    text-transform: uppercase;
+}
+
+.page .head {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: calc(18pt + 0.05em);
+}
+
+.page .buttons {
+    display: inline-block;
+    margin: calc(9pt + 0.025em - 0.5em);
+
+    float: right;
+}
+
+.title::after {
+    content: ".";
+    font-weight: bold;
+    color: #fb0;
+    font-size: 14pt;
+}
+
+.page {
+    border: 1px solid #000;
+    margin: 1vw;
+}
+
+.page .head {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.page .head .buttons > * {
+    background: white;
+    color: black;
+    font-weight: bold;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+
+    transition: background 400ms ease;
+}
+
+.page .head .buttons > *:hover {
+    background: #ffe7cb;
+}
+
+.page .body {
+    padding: 0.8em;
+    text-align: left;
+}
+
+.menu .selected {
+    border-bottom: 1px solid black;
+}
