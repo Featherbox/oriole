@@ -10,7 +10,7 @@ const create_page = (tit,cont) => {
 
     const title = document.createElement("div");
     title.className = "title";
-    title.innerText = tit;
+    title.innerHTML = tit;
     head.appendChild(title);
 
     const buttons = document.createElement("div");
@@ -37,7 +37,7 @@ const create_page = (tit,cont) => {
 
     const bod = document.createElement("div");
     bod.className = "body";
-    bod.innerText = cont;
+    bod.innerHTML = cont;
     bod.contentEditable = true;
 
     page.appendChild(head);
@@ -61,7 +61,16 @@ const create_page = (tit,cont) => {
 */
 
 const set_name = (page_num) => {
-    
+    let n = "set name";
+    let fn = (n) => {
+        let ps = document.getElementsByClassName("page");
+        ps[page_num].getElementsByClassName("title").innerHTML = n
+    };
+
+    if (page_num < 0) {
+        n = "create file";
+        fn = (n) => create_page(n,"");
+    }
 
     const page = document.createElement("div");
     page.className = "page";
@@ -70,8 +79,8 @@ const set_name = (page_num) => {
     head.className = "head";
 
     const title = document.createElement("div");
-    title.className = "title";
-    title.innerText = "Set Name";
+    title.className = "title nodot";
+    title.innerText = n;
     head.appendChild(title);
 
     const buttons = document.createElement("div");
@@ -96,10 +105,10 @@ const set_name = (page_num) => {
     page.appendChild(head);
     page.appendChild(bod);
 
+    while (notif.lastChild) notif.removeChild(notif.lastChild)
     notif.appendChild(page);
-    notif.appendChild(page);
+
+    notif.style.display = "block";
 }
 
-set_name(-1)
-
-create_page("Oriole","an Old World bird related to the starlings that feeds on fruit and insects, the male typically having bright yellow and black plumage.");
+create_page("Oriole","<em><strong>noun</strong> - an Old World bird related to the starlings that feeds on fruit and insects, the male typically having bright yellow and black plumage.</em>");
