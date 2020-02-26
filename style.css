@@ -61,7 +61,7 @@ body {
     left: 1em;
     top: -0.25em;
 
-    font-size: 7pt;
+    font-size: 9pt;
     
     text-transform: uppercase;
 }
@@ -101,11 +101,11 @@ body {
 
 .title.nodot::after {
     content: "|";
-    font-size: 7pt;
+    font-size: 9pt;
 }
 
 .title.nodot {
-    margin-top: 5pt;
+    margin-top: 7pt;
 }
 
 .page .head .buttons > * {
@@ -128,7 +128,7 @@ body {
 .page .body {
     padding: 0.8em;
     text-align: left;
-    font-size: 5pt;
+    font-size: 7pt;
 }
 
 .page .body:focus, .page .body:focus-within, .page .body:active {
