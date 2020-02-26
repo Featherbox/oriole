@@ -16,16 +16,12 @@ const create_page = (tit,cont) => {
     buttons.className = "buttons";
     const btn_rename = document.createElement("div");
     btn_rename.className = "ren";
-    btn_rename.innerText = "r";
     const btn_save = document.createElement("div");
     btn_save.className = "sav";
-    btn_save.innerText = "s";
     const btn_min = document.createElement("div");
     btn_min.className = "min";
-    btn_min.innerText = "-";
     const btn_delete = document.createElement("div");
     btn_delete.className = "del";
-    btn_delete.innerText = "x";
 
     buttons.appendChild(btn_rename);
     buttons.appendChild(btn_save);
@@ -45,5 +41,4 @@ const create_page = (tit,cont) => {
     pages.appendChild(page)
 }
 
-create_page("Noise","it's all so garbled");
-create_page("Cardinal","In modern war, you will die like a dog for no reason at all.");
+create_page("Oriole","an Old World bird related to the starlings that feeds on fruit and insects, the male typically having bright yellow and black plumage.");
