@@ -43,6 +43,11 @@ body {
     font-weight: bold;
 }
 
+#page-head .menu > * {
+    color: #000;
+    text-decoration: none;
+}
+
 #page-head .menu .selected {
     border-bottom: thin solid #000;
 }
@@ -55,28 +60,33 @@ body {
 
     min-width: 33%;
 
-    padding-top: calc(1.8rem);
+    padding-top: 1.6rem;
 
     border: thin solid #000;
 
     margin: 0.6rem;
 }
 
-#notif .page {
-    outline: thin solid #fff;
-}
-
 .page .body {
     font-size: 0.8rem;
+    min-height: 0.8rem;
 
     text-align: left;
 
+    word-break: break-all;
+
     padding: 0.6rem;
+
+    margin-top: 0.2rem;
 }
 
 .page .body:focus, .page .body:focus-within, .page .body:active {
     border: none;
     outline: none;
+}
+
+.page.minimize .body {
+    display: none;
 }
 
 .page .head {
@@ -163,6 +173,8 @@ body {
 
 
 #notif {
+    display: none;
+
     background: #000a;
 
     position: fixed;
@@ -174,6 +186,40 @@ body {
     padding: 3rem;
 }
 
-#notif {
-    display: none;
+#notif .page {
+    outline: thin solid #fff;
+}
+
+#notif .page .body {
+    width: calc(100% - 1.2rem);
+    
+    font-family: "Cutive Mono";
+
+    border: none;
+}
+
+
+#new-page {
+    display: inline-block;
+    
+    background: #000;
+    color: #fff;
+
+    position: fixed;
+    right: 0.3rem;
+    bottom: 0.3rem;
+
+    width: 1.4rem;
+    height: 1.4rem;
+
+    font-weight: bold;
+    font-size: 1.4rem;
+
+    margin-left: 0.5rem;
+    
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
