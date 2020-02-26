@@ -128,7 +128,7 @@ body {
 .page .body {
     padding: 0.8em;
     text-align: left;
-    font-size: 7pt;
+    font-size: 200pt;
 }
 
 .page .body:focus, .page .body:focus-within, .page .body:active {
