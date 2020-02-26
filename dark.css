@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap');
 
 body {
+    background: #000;
+
     text-align: center;
 
     font-family: "Cutive Mono";
@@ -23,6 +25,8 @@ body {
 }
 
 #page-head .title {
+    color: #fff;
+
     display: inline-block;
 
     font-size: 1.3rem;
@@ -31,7 +35,7 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
 
-    border-bottom: thin solid #000;
+    border-bottom: thin solid #fff;
 }
 
 #page-head .title::after {
@@ -44,33 +48,37 @@ body {
 }
 
 #page-head .menu > * {
-    color: #000;
+    color: #fb0;
     text-decoration: none;
 }
 
 #page-head .menu .selected {
-    border-bottom: thin solid #000;
+    border-bottom: thin solid #fb0;
 }
 
 
 .page {
+    background: #000;
+
     position: relative;
 
-    background: #fff;
+    background: #000;
 
     min-width: 33%;
 
     padding-top: 1.6rem;
 
-    border: thin solid #000;
+    border: thin solid #fb0;
 
     margin: 0.6rem;
 }
 
 .page .body {
+    color: #fff;
+
     font-size: 0.8rem;
     min-height: 0.8rem;
-    height: 400rem;
+    max-height: 30rem;
 
     text-align: left;
 
@@ -81,8 +89,6 @@ body {
     padding: 0.6rem;
 
     margin-top: 0.2rem;
-
-    transition: height 400ms ease;
 }
 
 .page .body:focus, .page .body:focus-within, .page .body:active {
@@ -91,12 +97,12 @@ body {
 }
 
 .page.minimize .body {
-    height: 0;
+    display: none;
 }
 
 .page .head {
-    background: #000;
-    color: #fff;
+    background: #fb0;
+    color: #000;
 
     position: absolute;
     top: 0;
@@ -130,7 +136,7 @@ body {
 
     content: ".";
 
-    color: #fb0;
+    color: #fff;
 
     font-size: 1.6rem;
     font-weight: bold;
@@ -158,7 +164,6 @@ body {
 .page .buttons > * {
     display: inline-block;
     
-    background: #fff;
     color: #000;
 
     width: 0.7rem;
@@ -166,6 +171,8 @@ body {
 
     font-weight: bold;
     font-size: 0.8rem;
+
+    border: thin solid #000;
 
     margin-left: 0.5rem;
 
@@ -196,6 +203,8 @@ body {
 }
 
 #notif .page .body {
+    background: none;
+
     width: calc(100% - 1.2rem);
     
     font-family: "Cutive Mono";
@@ -207,18 +216,20 @@ body {
 #new-page {
     display: inline-block;
     
-    background: #000;
-    color: #fff;
+    background: #fb0;
+    color: #000;
 
     position: fixed;
-    right: 0.3rem;
-    bottom: 0.3rem;
+    right: 0.7rem;
+    bottom: 0.7rem;
 
     width: 1.4rem;
     height: 1.4rem;
 
     font-weight: bold;
     font-size: 1.4rem;
+
+    border: 1px solid #000;
 
     margin-left: 0.5rem;
     
