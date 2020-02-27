@@ -187,5 +187,16 @@ const set_name = (page_num) => {
 }
 
 const flip = () => {
-    console.log(document.getElementsByTagName("link")[0].href)
+    let _switch = document.getElementById("theme");
+    let theme = document.getElementsByTagName("link")[0].href.split("/").pop();
+
+    if (theme == "dark.css") {
+        theme = "style.css";
+        _switch.innerHTML = "d";
+    } else {
+        theme = "dark.css";
+        _switch.innerHTML = "n";
+    }
+
+    document.getElementsByTagName("link")[0].href = `./${theme}`
 }

@@ -223,13 +223,40 @@ body {
     right: 0.7rem;
     bottom: 0.7rem;
 
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 0.7rem;
+    height: 0.7rem;
 
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 0.8rem;
 
-    border: 1px solid #000;
+    border: thin solid #000;
+
+    margin-left: 0.5rem;
+    
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+#theme {
+    display: inline-block;
+    
+    background: #000;
+    color: #fb0;
+
+    position: fixed;
+    right: 0.7rem;
+    bottom: 1.75rem;
+
+    width: 0.7rem;
+    height: 0.7rem;
+
+    font-weight: bold;
+    font-size: 0.8rem;
+
+    border: thin solid #fb0;
 
     margin-left: 0.5rem;
     
